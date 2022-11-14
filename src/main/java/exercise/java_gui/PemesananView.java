@@ -145,9 +145,8 @@ public class PemesananView extends javax.swing.JFrame {
                 .addGroup(customerBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(customerTeleponText)
                     .addComponent(customerAlamatText)
-                    .addGroup(customerBackgroundLayout.createSequentialGroup()
-                        .addComponent(customerNamaText)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                    .addComponent(customerNamaText))
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(customerBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(customerBackgroundLayout.createSequentialGroup()
                         .addGap(23, 23, 23)
@@ -243,7 +242,7 @@ public class PemesananView extends javax.swing.JFrame {
 
         menuJusAlpukat.setBackground(new java.awt.Color(255, 255, 255));
         menuJusAlpukat.setForeground(new java.awt.Color(0, 0, 0));
-        menuJusAlpukat.setText("Just Alpukat");
+        menuJusAlpukat.setText("Jus Alpukat");
         menuJusAlpukat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuJusAlpukatActionPerformed(evt);
@@ -354,9 +353,8 @@ public class PemesananView extends javax.swing.JFrame {
                 .addGap(0, 15, Short.MAX_VALUE)
                 .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(dataPenjualanTitle)
-                    .addGroup(upperBackgroundLayout.createSequentialGroup()
-                        .addComponent(dataPenjualanPane, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14))))
+                    .addComponent(dataPenjualanPane, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14))
             .addGroup(upperBackgroundLayout.createSequentialGroup()
                 .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(tambahButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -432,10 +430,10 @@ public class PemesananView extends javax.swing.JFrame {
     private void menuAyamBakarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAyamBakarActionPerformed
         if (menuAyamBakar.isSelected()) {
             totalPembelian += hargaAyamBakar;
-            pesanan.add("Ayam Bakar");
+            pesanan.add("Ayam Bakar : " + hargaAyamBakar);
         } else {
             totalPembelian -= hargaAyamBakar;
-            pesanan.remove("Ayam Bakar");
+            pesanan.remove("Ayam Bakar : " + hargaAyamBakar);
         }
         totalValue.setText("Rp" + totalPembelian + ",00");
     }//GEN-LAST:event_menuAyamBakarActionPerformed
@@ -443,10 +441,10 @@ public class PemesananView extends javax.swing.JFrame {
     private void menuNasiGorengActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuNasiGorengActionPerformed
         if (menuNasiGoreng.isSelected()) {
             totalPembelian += hargaNasiGoreng;
-            pesanan.add("Nasi Goreng");
+            pesanan.add("Nasi Goreng : " + hargaNasiGoreng);
         } else {
             totalPembelian -= hargaNasiGoreng;
-            pesanan.remove("Nasi Goreng");
+            pesanan.remove("Nasi Goreng : " + hargaNasiGoreng);
         }
         totalValue.setText("Rp" + totalPembelian + ",00");
     }//GEN-LAST:event_menuNasiGorengActionPerformed
@@ -454,10 +452,10 @@ public class PemesananView extends javax.swing.JFrame {
     private void menuGurameBakarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuGurameBakarActionPerformed
         if (menuGurameBakar.isSelected()) {
             totalPembelian += hargaGurameBakar;
-            pesanan.add("Gurame Bakar");
+            pesanan.add("Gurame Bakar : " + hargaGurameBakar);
         } else {
             totalPembelian -= hargaGurameBakar;
-            pesanan.remove("Gurame Bakar");
+            pesanan.remove("Gurame Bakar : " + hargaGurameBakar);
         }
         totalValue.setText("Rp" + totalPembelian + ",00");
     }//GEN-LAST:event_menuGurameBakarActionPerformed
@@ -465,10 +463,10 @@ public class PemesananView extends javax.swing.JFrame {
     private void menuMieGorengActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuMieGorengActionPerformed
         if (menuMieGoreng.isSelected()) {
             totalPembelian += hargaMieGoreng;
-            pesanan.add("Mie Goreng");
+            pesanan.add("Mie Goreng : " + hargaMieGoreng);
         } else {
             totalPembelian -= hargaMieGoreng;
-            pesanan.remove("Mie Goreng");
+            pesanan.remove("Mie Goreng : " + hargaMieGoreng);
         }
         totalValue.setText("Rp" + totalPembelian + ",00");
     }//GEN-LAST:event_menuMieGorengActionPerformed
@@ -476,10 +474,10 @@ public class PemesananView extends javax.swing.JFrame {
     private void menuTehManisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTehManisActionPerformed
         if (menuTehManis.isSelected()) {
             totalPembelian += hargaTehManis;
-            pesanan.add("Teh Manis");
+            pesanan.add("Teh Manis : " + hargaTehManis);
         } else {
             totalPembelian -= hargaTehManis;
-            pesanan.remove("Teh Manis");
+            pesanan.remove("Teh Manis : " + hargaTehManis);
         }
         totalValue.setText("Rp" + totalPembelian + ",00");
     }//GEN-LAST:event_menuTehManisActionPerformed
@@ -487,10 +485,10 @@ public class PemesananView extends javax.swing.JFrame {
     private void menuTehTarikActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTehTarikActionPerformed
         if (menuTehTarik.isSelected()) {
             totalPembelian += hargaTehTarik;
-            pesanan.add("Teh Tarik");
+            pesanan.add("Teh Tarik : " + hargaTehTarik);
         } else {
             totalPembelian -= hargaTehTarik;
-            pesanan.remove("Teh Tarik");
+            pesanan.remove("Teh Tarik : " + hargaTehTarik);
         }
         totalValue.setText("Rp" + totalPembelian + ",00");
     }//GEN-LAST:event_menuTehTarikActionPerformed
@@ -498,10 +496,10 @@ public class PemesananView extends javax.swing.JFrame {
     private void menuJusAlpukatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuJusAlpukatActionPerformed
         if (menuJusAlpukat.isSelected()) {
             totalPembelian += hargaJusAlpukat;
-            pesanan.add("Jus Alpukat");
+            pesanan.add("Jus Alpukat : " + hargaJusAlpukat);
         } else {
             totalPembelian -= hargaJusAlpukat;
-            pesanan.remove("Jus Alpukat");
+            pesanan.remove("Jus Alpukat : " + hargaJusAlpukat);
         }
         totalValue.setText("Rp" + totalPembelian + ",00");
     }//GEN-LAST:event_menuJusAlpukatActionPerformed
@@ -509,10 +507,10 @@ public class PemesananView extends javax.swing.JFrame {
     private void menuKopiLuwakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuKopiLuwakActionPerformed
         if (menuKopiLuwak.isSelected()) {
             totalPembelian += hargaKopiLuwak;
-            pesanan.add("Kopi Luwak");
+            pesanan.add("Kopi Luwak : " + hargaKopiLuwak);
         } else {
             totalPembelian -= hargaKopiLuwak;
-            pesanan.remove("Kopi Luwak");
+            pesanan.remove("Kopi Luwak : " + hargaKopiLuwak);
         }
         totalValue.setText("Rp" + totalPembelian + ",00");
     }//GEN-LAST:event_menuKopiLuwakActionPerformed
