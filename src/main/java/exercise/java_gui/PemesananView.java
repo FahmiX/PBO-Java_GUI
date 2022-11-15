@@ -9,7 +9,7 @@ import java.util.*;
 public class PemesananView extends javax.swing.JFrame {
 
     // Deklarasi variabel
-    private String nama, alamat, telepon, tempStr;
+    private String nama, alamat, telepon;
     private int totalPembelian;
     private int hargaAyamBakar, hargaNasiGoreng, hargaGurameBakar, hargaMieGoreng;
     private int hargaTehManis, hargaTehTarik, hargaJusAlpukat, hargaKopiLuwak;
@@ -75,6 +75,7 @@ public class PemesananView extends javax.swing.JFrame {
         lowerBackground = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Aplikasi Pemesanan Makanan");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         upperBackground.setBackground(new java.awt.Color(51, 153, 255));
@@ -274,7 +275,7 @@ public class PemesananView extends javax.swing.JFrame {
                             .addComponent(menuNasiGoreng)
                             .addComponent(menuGurameBakar)
                             .addComponent(menuMieGoreng))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(menuBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(menuTehTarik)
                             .addComponent(menuTehManis)
@@ -287,7 +288,7 @@ public class PemesananView extends javax.swing.JFrame {
             .addGroup(menuBackgroundLayout.createSequentialGroup()
                 .addGap(5, 5, 5)
                 .addComponent(menuTitle)
-                .addGap(15, 15, 15)
+                .addGap(30, 30, 30)
                 .addGroup(menuBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(menuAyamBakar)
                     .addComponent(menuTehManis))
@@ -303,7 +304,7 @@ public class PemesananView extends javax.swing.JFrame {
                 .addGroup(menuBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(menuMieGoreng)
                     .addComponent(menuKopiLuwak))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         totalTitle.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -349,30 +350,32 @@ public class PemesananView extends javax.swing.JFrame {
         upperBackground.setLayout(upperBackgroundLayout);
         upperBackgroundLayout.setHorizontalGroup(
             upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, upperBackgroundLayout.createSequentialGroup()
-                .addGap(0, 15, Short.MAX_VALUE)
-                .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(dataPenjualanTitle)
-                    .addComponent(dataPenjualanPane, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14))
             .addGroup(upperBackgroundLayout.createSequentialGroup()
+                .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(upperBackgroundLayout.createSequentialGroup()
+                        .addGap(477, 477, 477)
+                        .addComponent(tambahButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(upperBackgroundLayout.createSequentialGroup()
+                        .addGap(200, 200, 200)
+                        .addComponent(titleBackground, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, upperBackgroundLayout.createSequentialGroup()
                 .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(tambahButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(upperBackgroundLayout.createSequentialGroup()
-                            .addGap(200, 200, 200)
-                            .addComponent(titleBackground, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(upperBackgroundLayout.createSequentialGroup()
-                            .addGap(15, 15, 15)
-                            .addComponent(customerBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(21, 21, 21)
-                            .addComponent(menuBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, upperBackgroundLayout.createSequentialGroup()
-                            .addGap(309, 309, 309)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, upperBackgroundLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(customerBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addComponent(menuBackground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(upperBackgroundLayout.createSequentialGroup()
+                        .addGap(0, 15, Short.MAX_VALUE)
+                        .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(dataPenjualanTitle)
+                                .addComponent(dataPenjualanPane, javax.swing.GroupLayout.PREFERRED_SIZE, 585, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(totalTitle)
                                 .addComponent(totalValue, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(14, 14, 14))
         );
         upperBackgroundLayout.setVerticalGroup(
             upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -380,9 +383,9 @@ public class PemesananView extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(titleBackground, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(customerBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(menuBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(upperBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(customerBackground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(menuBackground, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(39, 39, 39)
                 .addComponent(totalTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -418,7 +421,7 @@ public class PemesananView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void customerTeleponValueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerTeleponValueActionPerformed
-        tempStr = customerTeleponValue.getText();
+        String tempStr = customerTeleponValue.getText();
         if (tempStr.matches("[0-9]+") && tempStr.length() <= 13) {
             telepon = tempStr;
         } else {
@@ -520,11 +523,11 @@ public class PemesananView extends javax.swing.JFrame {
         String dataPesanan = "";
         nama = customerNamaValue.getText();
         alamat = customerAlamatValue.getText();
-        telepon = customerAlamatValue.getText();
+        telepon = customerTeleponValue.getText();
         if (nama.equals("") || alamat.equals("") || telepon.equals("")) {
             dataPenjualanValue.setText("Data Customer Belum Lengkap!");
         } else {
-            dataCustomer = ("==================== CHECKOUT RESTORAN ====================\n"
+            dataCustomer = ("==================== CHECKOUT RESTORAN ===================="
                     + "\n---------------------------------------------------------------------------------------------------------"
                     + "\nNama           : " + nama
                     + "\nAlamat         : " + alamat
